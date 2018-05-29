@@ -8,6 +8,7 @@ var app = app || {};
     rawMealObj = rawMealObj.meals[0];
 
     this.id = rawMealObj.idMeal;
+    this.name = rawMealObj.strMeal;
     this.category = rawMealObj.strCategory;
     this.area = rawMealObj.strArea;
     this.instructions = rawMealObj.strInstructions;
