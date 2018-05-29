@@ -14,22 +14,15 @@
   <link rel="stylesheet" href="modules/about-us.css">
   <link rel="stylesheet" href="styles/main-page.css">
 
-  <script id="recipe-show-template" type="text/x-handlebars-template">
-    <article class="clearfix" data-recipe="{{recipeName}}" data-category="{{category}}">
-      <header>
-        <h2>{{{RecipeName}}}</h1>
-        <div>
-          <address><a href="{{recipeUrl}}">{{recipeUrl}}</a></address>
-        </div>
-      </header>
-      <section class="recipe-body"> {{{ RecipeText}}}</section>
-      <!-- <section class="ingredients-body">{{{Ingredients}}}</section>
-      <section class="instructions-body">{{{Instructions}}}</section> -->
-      <!-- <a href="#" class="read-on">Read on &rarr;</a> -->
+  <script id="meal-template" type="text/x-handlebars-template">
+    <article data-meal-id="{{idMeal}}">
+      <img src="{{strMealThumb}}">
+      <h2>{{strMeal}}</h2>
+      <button data-meal-id="{{idMeal}}">Cook Me!</button>
     </article>
   </script>
 
-  <script id="recipe-cook-template" type="text/x-handlebars-template">
+  <!-- <script id="recipe-cook-template" type="text/x-handlebars-template">
     <article class="clearfix" data-recipe="{{recipeName}}" data-category="{{category}}">
       <header>
         <div>
@@ -39,9 +32,8 @@
       </header>
       <section class="ingredients-body">{{{Ingredients}}}</section>
       <section class="instructions-body">{{{Instructions}}}</section>
-      <!-- <a href="#" class="read-on">Read on &rarr;</a> -->
     </article>
-  </script>
+  </script> -->
 
 
 </head>
@@ -87,6 +79,12 @@
               </select>
             </li> 
         </ul>
+
+        <div id="meals">
+          <h2>Meals to choose from</h2>
+        </div>
+
+
       </section>
     </div>
     
