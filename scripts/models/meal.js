@@ -30,7 +30,8 @@ var app = app || {};
   }
   Meal.all = [];
 
-
+  Meal.fetchAll = callback => 
+    $.get()
 
   Meal.fetchOne = (ctx, callback) =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/ingredients)${ctx.params.idMeal}`)
@@ -39,7 +40,7 @@ var app = app || {};
     $.get(`localhost:3000/api/recipes/ingredients/`, ingredients)
       .then(Meal.loadAll)
       .then(callback)
-      .then(errorCallback)
+      .catch(errorCallback)
   }
 
   Meal.searchByName = (name, callback) => {
