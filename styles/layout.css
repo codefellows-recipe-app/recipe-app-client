@@ -75,6 +75,11 @@ img {
   }
 }
 
+.bio-pic {
+  max-height: 40%;
+  max-width: 35%;
+}
+
 #copyright{
   color: lightslategray;
   text-align: center;

@@ -50,11 +50,11 @@
   <header>
     <nav class="clearfix">
       <ul>
-        <li> Search </li>
-        <li> Cook </li>
-        <li> About Us </li> 
+        <li id="menu" class="icon-menu"></li>
+        <li class="nav"><a href="/"> Search </a></li>
+        <li class="nav"><a href="/recipe/cook-stuff"> Cook (Placeholder link)</a></li>
+        <li class="nav"><a href="/recipe/about-us"> About Us (Placeholder link) </a></li> 
       </ul>
-    </nav>
     
   </header>
   
@@ -74,6 +74,16 @@
               <option value="">-- Search by Recipe Name --</option>
             </select>
           </li> 
+          <li>
+              <select id="category-filter">
+                <option value="">-- Search by Category --</option>
+              </select>
+            </li> 
+          <li>
+              <select id="area-filter">
+                <option value="">-- Search by Area --</option>
+              </select>
+            </li> 
         </ul>
       </section>
     </div>
@@ -88,6 +98,9 @@
   <h2> Recipe Options: </h2>
   <p> Called recipe-view and recipe-show-template </p>
 <!-- These need to go in Handlebars template format -->
+
+
+
     <section class="card">
       <img src=" put image url here ">
     </section>
@@ -122,7 +135,7 @@
       <!-- <label>
         <input type="checkbox" id="article-published"> Published
       </label> -->
-    </fieldset>
+     </fieldset>
     </form>
   </section>
 </div>
@@ -131,16 +144,20 @@
     <h2> About Us </h2>
     <p> Called about-us-view </p> 
     <section class="deck1">
-      <p> Timothy "G.B." Busch </p>
-      <img src=" put image here">
-      <p> Ashton K. Ellis </p>
-      <img src=" put image here">
+      <title> Timothy "G.B." Busch </title>
+      <img class="bio-pic" src="img/GB.jpg.png">
+      <p>  GB comes from Seattle with a background in the Army and Finance. He started getting into coding by drawing from the inspiration of combining music, art, and technology to create full audio, visual, and interactive products. He looks forward to the artistic and technical challenges that web and software development has to offer. </p>
+      <title> Ashton K. Ellis </title>
+      <img class="bio-pic" src="img/ashtonellis.jpeg">
+      <p> Ashton is what James Bond aspires to be.  His cooking skills, however, lack practice.  Thus, CookList was born. </p>
     </section>
     <section class="deck2">
-        <p> Kevin Hwangpo </p>
-        <img src=" put image here">
-        <p> Sam Porter Giffords </p>
-        <img src=" put image here">
+        <title> Kevin Hwangpo </title>
+        <img class="bio-pic" src=" put image here">
+        <p> Kevin brought all his gaming skills to bear -- setting up scaffolding over the holiday weekend.  </p>
+        <title> Sam Porter Giffords </title>
+        <img class="bio-pic" src="img/IMG_5163.jpg">
+        <p> Sam cranked up her ninja skills (yeah, Po -- annnnd. . . ? and busted out the index.html page with some css.  Whaaaaa ?  </p>
       </section>
   </div>
 
