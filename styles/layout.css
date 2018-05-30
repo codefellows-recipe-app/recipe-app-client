@@ -35,6 +35,8 @@ ul li {
   padding: 0
 }
 
+/* == NAV LINK STYLING == */
+
 /* unvisited link */
 a:link {
   color: black;
@@ -60,6 +62,15 @@ a:active {
   background-color: #49a078;
   color: black;
   text-decoration: underline;
+}
+
+/* == MEAL-VIEW STYLING */
+
+.meal-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .container {
@@ -101,23 +112,24 @@ img {
 
 /* === MEDIA QUERY === */
 
-@media only screen and (max-width: 640px) {
-  header section {
-    background-color: mintcream;
-    float: none;
-    padding: .1em .1em .1em 2em;
-  }
-
-  select {
-    width: 12em;
-  }
-
 @media only screen and (min-width: 640px) {
-  header section {
-    padding: .1em .1em .1em 2em;
-    float: none;
-  }
+    /* background-color: mintcream; */
+    background-color: blue;
+    /* float: none;
+    padding: .1em .1em .1em 2em; */ 
+  } 
 
+  /* select {
+    width: 12em;
+  } */
+
+/* @media only screen and (min-width: 640px) {
+  background-color: #49a078;
+  /* header section {
+    padding: .1em .1em .1em 2em;
+    float: none; 
+  } */
+/* 
   select {
     width: 15em;
     margin: .2em .2em;
@@ -127,13 +139,15 @@ img {
     display: inline;
     margin: 5px;
     padding: 5px;
-   }
-  }
-}
+   } */
 
-.bio-pic {
+img.bio-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-height: 40%;
   max-width: 35%;
+  width: 50%;
 }
 
 #copyright{
