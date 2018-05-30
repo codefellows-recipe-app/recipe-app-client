@@ -5,33 +5,14 @@ var app = app || {};
 
   const mealView = {};
 
-  mealView.initSearchFormPage = function () {
-    app.showOnly('#search-view');
+  app.mealView.initMealPage = function () {
+    app.showOnly('#meal-view');
 
-    $('#meal-view').on('submit', function (event) {
-
-      event.preventDefault();
-
-
-      let meal = {
-        name: event.target.name.value || '',
-        ingredients: event.target.ingredients.value || '',
-        area: event.target.area.value || '',
-        categories: event.target.categories.value || '',
-      };
-
-      module.Book.find(book, bookView.initSearchResultsPage);
-
-
-      event.target.name.value = '';
-      event.target.ingredients.value = '';
-      event.target.area.value = '';
-      event.target.categories.value = '';
+    $('#meal-view').empty();
+    .append()
     })
   }
 
-  
-
-module.mealView = mealView;
+  module.mealView = mealView;
 
 })(app)
