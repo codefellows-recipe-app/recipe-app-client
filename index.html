@@ -4,18 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Recip.me</title>
+  <title> CookList </title>
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
-  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="modules/about-us.css">
+
+  <link rel="stylesheet" href="styles/main-page.css">
   <link rel="stylesheet" href="modules/about-us.css">
   <link rel="stylesheet" href="styles/main-page.css">
 
+  <script id="meal-template" type="text/x-handlebars-template">
+    <article data-meal-id="{{idMeal}}">
+      <img src="{{strMealThumb}}">
+      <h2>{{strMeal}}</h2>
+      <a href="meal/{{idMeal}}"> Cook Me! </a>
+    </article>
+  </script>
+
 </head>
+
 <body>
-  <h1>hello</h1>
-  <script src="scripts/models.js/meal.js"></script>
+
+  <header>
+    <nav class="clearfix">
+      <ul>
+        <li id="menu" class="icon-menu"></li>
+        <li class="nav"><a href="/about">About Us</a></li> 
+        <li class="nav"><a href="/meal"> Surprise Me ! </a></li>
+        <li class="nav"><a href="/search"> Search </a></li>
+      </ul>
+      
+  </header>
+  
+  <main>
+    <section id="search-view" class="tab-content">
+      <div class="filters"> 
+          <!-- These are the "buttons" to use to search -->
+        <a href="#about"> Ingredient </a>
+        <a href="#contact"> Recipe Name </a>
+        <a href="#contact"> Category </a>
+        <a href="#contact"> Area </a>
+
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+      <!-- </div> -->
+
+      <!-- RADIO BUTTONS FOR TESTING -->
+      <!-- <input type="radio" name="searchDimension" value="ingredient" />ingredients<br/>
+      <input type="radio" name="searchDimension" value="name" />name<br/>
+      <input type="radio" name="searchDimension" value="category" />category<br/>
+      <input type="radio" name="searchDimension" value="area" />area<br/> -->
+
+      <!-- put a  text input field here -->
+      <input type="text" size="30" value="type here" id="searchByMealDimensionQualifier">
+      <button id="performMealSearchButton"> Help Me Cook </button>
+
+      <div id="meals">
+        <h2> Meals to Choose From </h2>
+      </div>
+    </section>
+    
+  <!-- <form class="search-meal" action="   ">   need info here -->
+    <!-- <input type="text" placeholder="Search Meal by Name" name="search">
+    <button type="submit"><i class=" search "></i></button>
+  </form> -->
+
+  <section id="meal-view" class="tab-content">
+    <h2 id="recipe-name"> Recipe Name </h2>
+    <img class="meal-pic" src="https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg">
+    <ul id="meal-ingredients"></ul>
+    <ul id="meal-instructions"></ul>
+  </section>
+  
+  <!-- <div class="recipe-cook-template container">
+    <h2> This is the container to show the selected recipe </h2>
+    <p> Called recipe-cook-template </p>  -->
+    <!-- display handlebars for selected recipe here-->
+  <!-- </div> -->
+<!-- 
+  <div class="recipe-add container">
+  <section id="write" class="tab-content">
+
+      <h2> Add a New Recipe </h2>
+
+      <p> Called recipe-add </p> 
+      <form action="#" id="new-recipe">
+        <fieldset>
+          <label>
+            <input type="text" id="recipe-title" placeholder="Recipe title" required>
+          </label>
+          <label>
+            <input type="text" id="body-recipeUrl" placeholder="Recipe URL" required>
+          </label>
+          <textarea id="recipe-ingredients-body" rows="8" cols="40" placeholder=" Ingredients" required></textarea>
+          <textarea id="recipe-instructions-body" rows="8" cols="40" placeholder=" Instructions" required></textarea>
+
+          <label>
+            <input type="text" id="recipe-category" placeholder="Category" required>
+          </label>
+          <label>
+            <input type="checkbox" id="article-published"> Published
+          </label>
+        </fieldset>
+      </form>
+    </section>
+  </section> -->
+
+<section id="about-view" class="tab-content">
+    <h2> About Us </h2>
+    <p> Called about-us-view </p> 
+    <section class="deck1">
+      <title> Timothy "G.B." Busch </title>
+      <img class="bio-pic" src="img/GB.jpg.png">
+      <p>  GB comes from Seattle with a background in the Army and Finance. He started getting into coding by drawing from the inspiration of combining music, art, and technology to create full audio, visual, and interactive products. He looks forward to the artistic and technical challenges that web and software development has to offer. </p>
+      <title> Ashton K. Ellis </title>
+      <img class="bio-pic" src="img/ashtonellis.jpeg">
+      <p> Ashton is what James Bond aspires to be.  His cooking skills, however, lack practice.  Thus, CookList was born. </p>
+    </section>
+    <section class="deck2">
+        <title> Kevin Hwangpo </title>
+        <img class="bio-pic" src=" put image here">
+        <p> Kevin brought all his gaming skills to bear -- setting up scaffolding over the holiday weekend.  </p>
+        <title> Sam Porter Giffords </title>
+        <img class="bio-pic" src="img/IMG_5163.jpg">
+        <p> Sam is originally from a small town in Texas with a BA in Psychology.  She's been in technology, in some form or fashion, for many years with coding being the latest iteration.  She aspires to use her coding skills to assist a state-level senior organization with a website rewrite as well as learning more about about backend development scripting. </p>
+      </section>
+    </main>
+
+    <!-- External CDNs Resources-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
+    <!-- Application Resources -->
+    <script src="scripts/models/meal.js"></script>
+    <script src="scripts/views/search-view.js"></script>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/views/routes.js"></script>
+
+    <script src="scripts/views/meal-view.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+    <script> app.mealView.initSearchFormPage() </script>
+
+
 </body>
+<footer id="copyright">Copyright &copy;2018 CookFellows
+  <div id="social">
+      <ul>
+          <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"><img src="img/linkedin.svg"></a></li>
+          <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"> <img src="img/github.svg"></a></li>
+        </ul>
+  </div>
+
+</footer>
 </html>
