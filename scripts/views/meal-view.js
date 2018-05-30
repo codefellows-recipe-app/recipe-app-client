@@ -3,12 +3,12 @@ var app = app || {};
 
 (function (module) {
 
-
+  const mealView = {};
 
   mealView.initSearchFormPage = function () {
-    app.showOnly('.search-view');
+    app.showOnly('#search-view');
 
-    $('#add the tag here').on('submit', function (event) {
+    $('#meal-view').on('submit', function (event) {
 
       event.preventDefault();
 
@@ -29,6 +29,8 @@ var app = app || {};
       event.target.categories.value = '';
     })
   }
+
+module.mealView = mealView;
 
 })(app)
 

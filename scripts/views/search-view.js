@@ -14,7 +14,7 @@ var app = app || {};
 
 
   // $(document).ready(() => {
-  //   $('#performMealSearchButon').click(() => {
+  //   $('#performMealSearchButton').click(() => {
   //     const selValue = $('input[name=searchDimension]:checked').val(); // radio button -  i.e. ingredients
 
   //     const inputValue = $('#searchByMealDimensionQualifier').val(); // text input field - i.e. butter (an ingredient, for example)

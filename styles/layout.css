@@ -6,22 +6,18 @@
 h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 3em;
-
-/* === OVERALL LAYOUT RULES === */
-
-h1 {
-  font-size: 2em;
   margin: .5em;
   padding: .5em; 
   text-align: center
 }
+
+/* === OVERALL LAYOUT RULES === */
 
 h2 {
   font-family: 'Handlee', cursive; 
   font-size: 1.5em; 
   text-align: center
 }
-
  
 p {
   font-family: 'Architects Daughter', cursive;
@@ -37,6 +33,33 @@ ul li {
   list-style-type: none;
   margin: 0 .5em;
   padding: 0
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  padding: .5em; 
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #d96c06;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  background-color: #49a078;
+  color: floralwhite;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  background-color: #49a078;
+  color: black;
+  text-decoration: underline;
 }
 
 .container {
@@ -87,6 +110,7 @@ img {
 
   select {
     width: 12em;
+  }
 
 @media only screen and (min-width: 640px) {
   header section {
@@ -101,10 +125,9 @@ img {
 
   #filters li {
     display: inline;
-
     margin: 5px;
     padding: 5px;
-
+   }
   }
 }
 
