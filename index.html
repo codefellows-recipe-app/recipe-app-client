@@ -20,7 +20,6 @@
     <article data-meal-id="{{idMeal}}">
       <img src="{{strMealThumb}}">
       <h2>{{strMeal}}</h2>
-      <!-- <button data-meal-id="{{idMeal}}">Cook Me!</button> -->
       <a href="meal/{{idMeal}}"> Cook Me! </a>
     </article>
   </script>
@@ -30,6 +29,7 @@
 <body>
 
   <header>
+    <h1> CookList </h1>
     <nav class="clearfix">
       <ul>
         <li id="menu" class="icon-menu"></li>
@@ -48,13 +48,6 @@
   </header>
   
   <main>
-    <h1> CookList </h1>
-    
-
-    <div class="filters">
-      <section id="recipe-ingredients" class="tab-content">
-        <ul id="ingredients">
-
     <section id="search-view" class="tab-content">
       <div class="filters">
         <ul id="ingredients">
@@ -81,21 +74,20 @@
               </select>
           </li> 
         </ul>
+      </div>
 
-        <!-- RADIO BUTTONS FOR TESTING -->
-        <!-- <input type="radio" name="searchDimension" value="ingredient" />ingredients<br/>
-        <input type="radio" name="searchDimension" value="name" />name<br/>
-        <input type="radio" name="searchDimension" value="category" />category<br/>
-        <input type="radio" name="searchDimension" value="area" />area<br/> -->
+      <!-- RADIO BUTTONS FOR TESTING -->
+      <!-- <input type="radio" name="searchDimension" value="ingredient" />ingredients<br/>
+      <input type="radio" name="searchDimension" value="name" />name<br/>
+      <input type="radio" name="searchDimension" value="category" />category<br/>
+      <input type="radio" name="searchDimension" value="area" />area<br/> -->
 
-        <!-- put a  text input field here -->
-        <input type="text" size="30" value="type here" id="searchByMealDimensionQualifier">
-        <button id="performMealSearchButton"> Feed Me !</button>
+      <!-- put a  text input field here -->
+      <input type="text" size="30" value="type here" id="searchByMealDimensionQualifier">
+      <button id="performMealSearchButton"> Feed Me !</button>
 
-        <div id="meals">
-          <h2> Meals to Choose From </h2>
-        </div>
-
+      <div id="meals">
+        <h2> Meals to Choose From </h2>
       </div>
     </section>
     
