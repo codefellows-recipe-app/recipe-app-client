@@ -89,55 +89,56 @@
     <button type="submit"><i class=" search "></i></button>
   </form> -->
 
+  <section id="meal-view" class="tab-content">
+    <div class="recipe-view recipe-show-template container">
+      <h2> Recipe Options: </h2>
+      <p> Called recipe-view and recipe-show-template </p>
 
-<div class="recipe-view recipe-show-template container">
-  <h2> Recipe Options: </h2>
-  <p> Called recipe-view and recipe-show-template </p>
+      <h3> FOR TESTING PURPOSES H3 </h3> 
+      <h4> FOR TESTING PURPOSES H4 </h4> 
+      <h5> FOR TESTING PURPOSES H5 </h5> 
 
-  <h3> FOR TESTING PURPOSES H3 </h3> 
-  <h4> FOR TESTING PURPOSES H4 </h4> 
-  <h5> FOR TESTING PURPOSES H5 </h5> 
+        <section class="card">
+          <img src=" put image url here ">
+        </section>
+    </div>
+  
+    <div class="recipe-cook-template container">
+      <h2> This is the container to show the selected recipe </h2>
+      <p> Called recipe-cook-template </p> 
+      <!-- display handlebars for selected recipe here-->
+    </div>
 
-    <section class="card">
-      <img src=" put image url here ">
-    </section>
-</div>
+    <div class="recipe-add container">
+    <section id="write" class="tab-content">
 
-<div class="recipe-cook-template container">
-  <h2> This is the container to show the selected recipe </h2>
-  <p> Called recipe-cook-template </p> 
-  <!-- display handlebars for selected recipe here-->
-</div>
+        <h2> Add a New Recipe </h2>
 
-<div class="recipe-add container">
-<section id="write" class="tab-content">
+        <p> Called recipe-add </p> 
+        <fieldset>
+        <form action="#" id="new-recipe">
+          <label>
+            <input type="text" id="recipe-title" placeholder="Recipe title" required>
+          </label>
+          <label>
+            <input type="text" id="body-recipeUrl" placeholder="Recipe URL" required>
+          </label>
+          <textarea id="recipe-ingredients-body" rows="8" cols="40" placeholder=" Ingredients" required></textarea>
+          <textarea id="recipe-instructions-body" rows="8" cols="40" placeholder=" Instructions" required></textarea>
 
-    <h2> Add a New Recipe </h2>
-
-    <p> Called recipe-add </p> 
-    <fieldset>
-    <form action="#" id="new-recipe">
-      <label>
-        <input type="text" id="recipe-title" placeholder="Recipe title" required>
-      </label>
-      <label>
-        <input type="text" id="body-recipeUrl" placeholder="Recipe URL" required>
-      </label>
-      <textarea id="recipe-ingredients-body" rows="8" cols="40" placeholder=" Ingredients" required></textarea>
-      <textarea id="recipe-instructions-body" rows="8" cols="40" placeholder=" Instructions" required></textarea>
-
-      <label>
-        <input type="text" id="recipe-category" placeholder="Category" required>
-      </label>
-      <!-- <label>
-        <input type="checkbox" id="article-published"> Published
-      </label> -->
-     </fieldset>
-    </form>
+          <label>
+            <input type="text" id="recipe-category" placeholder="Category" required>
+          </label>
+          <!-- <label>
+            <input type="checkbox" id="article-published"> Published
+          </label> -->
+        </fieldset>
+        </form>
+      </section>
+    </div>
   </section>
-</div>
 
-<div class="about-us-view container">
+<section id="about-view" class="tab-content">
     <h2> About Us </h2>
     <p> Called about-us-view </p> 
     <section class="deck1">
@@ -156,7 +157,7 @@
         <img class="bio-pic" src="img/IMG_5163.jpg">
         <p> Sam is originally from a small town in Texas with a BA in Psychology.  She's been in technology, in some form or fashion, for many years with coding being the latest iteration.  She aspires to use her coding skills to assist a state-level senior organization with a website rewrite as well as learning more about about backend development scripting. </p>
       </section>
-  </div>
+    </section>
 
     <!-- External CDNs Resources-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

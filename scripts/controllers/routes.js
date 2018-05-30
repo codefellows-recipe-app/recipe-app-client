@@ -2,7 +2,8 @@
 
 page('/', ctx => {
   console.log('page js / route fired')
-  // app.searchView.initSearchPage()
+  app.searchView.initSearchPage()
+  app.showOnly('#search-view')
 })
 
 page('/search', ctx => {

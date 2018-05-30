@@ -13,7 +13,7 @@ var app = app || {};
   };
 
   module.showOnly = (selector) => {
-    $('.container').hide();
+    $('.tab-content').hide();
     $(selector).show();
   };
 
