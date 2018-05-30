@@ -4,6 +4,7 @@ var app = app || {};
 (function (module) {
 
 
+
   mealView.initSearchFormPage = function () {
     app.showOnly('.search-view');
 
@@ -30,3 +31,5 @@ var app = app || {};
   }
 
 })(app)
+
+

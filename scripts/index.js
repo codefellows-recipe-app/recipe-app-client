@@ -4,7 +4,7 @@ var app = app || {};
 (function(module){
 
   let productionApiUrl = 'https://www.themealdb.com/api/json/v1/1/';
-  let developmentApiUrl = 'http://localhost:3000';
+  let developmentApiUrl = 'https://www.themealdb.com/api/json/v1/1/';
 
   module.isProduction= /^(?!localhost|127)/.test(window.location.hostname);
 
@@ -13,7 +13,7 @@ var app = app || {};
   };
 
   module.showOnly = (selector) => {
-    $('.container').hide();
+    $('.tab-content').hide();
     $(selector).show();
   };
 

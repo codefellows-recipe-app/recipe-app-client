@@ -12,6 +12,7 @@ var app = app || {};
     app.Meal.all.forEach(meal => $('#meals').append(app.render('meal-template', meal)))
   }
 
+
   // $(document).ready(() => {
   //   $('#performMealSearchButon').click(() => {
   //     const selValue = $('input[name=searchDimension]:checked').val(); // radio button -  i.e. ingredients
@@ -26,6 +27,7 @@ var app = app || {};
   //     } // etc, - maybe use a switch case
   //   });
   // })
+
 
   module.searchView = searchView;
 
