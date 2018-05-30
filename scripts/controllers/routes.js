@@ -14,7 +14,8 @@ page('/meal', ctx => {
 })
 
 page('/meal/:meal_id', ctx => {
-  console.log('page js /cook route fired', ctx);
+  console.log('page js /cook route fired', ctx.params.meal_id)
+  app.Meal.fetchOne(ctx.params.meal_id);
 })
 
 page('/about', ctx => {
