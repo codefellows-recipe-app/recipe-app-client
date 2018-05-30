@@ -46,8 +46,6 @@ var app = app || {};
   }
 
   Meal.fetchAll = function (callback) {
-    app.ENVIRONMENT.apiUrl = `https://www.themealdb.com/api/json/v1/1`;
-
     $.get(`${app.ENVIRONMENT.apiUrl}/filter.php?i=chicken%20breast`)
       .then(results => {
         Meal.all = results.meals;
