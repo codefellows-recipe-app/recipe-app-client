@@ -5,33 +5,25 @@ var app = app || {};
 
   const mealView = {};
 
-  mealView.initSearchFormPage = function () {
-    app.showOnly('#search-view');
+  mealView.initMealPage = function (mealId) {
+    app.showOnly('#meal-view');
 
-    $('#meal-view').on('submit', function (event) {
+    $('#meal-ingredients').empty();
+    $('#meal-instructions').empty();
 
-      event.preventDefault();
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipe/${mealId}`)
+      .then(mealData => {
+        $('#meal-name').text(mealData.name);
+        $('#meal-image').attr('src', mealData.thumb);
 
+        mealData.ingredients.forEach(ingredient => {
+          $('#meal-ingredients').append(`<li><input type="checkbox">${ingredient.measure} ${ingredient.name}</li>`)
+        })
 
-      let meal = {
-        name: event.target.name.value || '',
-        ingredients: event.target.ingredients.value || '',
-        area: event.target.area.value || '',
-        categories: event.target.categories.value || '',
-      };
-
-      module.Book.find(book, bookView.initSearchResultsPage);
-
-
-      event.target.name.value = '';
-      event.target.ingredients.value = '';
-      event.target.area.value = '';
-      event.target.categories.value = '';
-    })
+        mealData.instructions.forEach(instruction => {
+          $('#meal-instructions').append(`<li><input type="checkbox">${instruction.body}</li>`);
+        })
+      })
   }
-
-  
-
-module.mealView = mealView;
-
+  module.mealView = mealView;
 })(app)
