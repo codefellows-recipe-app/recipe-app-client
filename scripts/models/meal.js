@@ -30,12 +30,28 @@ var app = app || {};
   }
   Meal.all = [];
 
-  Meal.fetchAll = callback => 
-    $.get()
-
-  Meal.fetchOne = (ctx, callback) =>
+  //sending requests to server
+  Meal.fetchIngredients = (ctx, callback) =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/ingredients)${ctx.params.idMeal}`)
 
+  Meal.fetchName = (ctx, callback) =>
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/name/${ctx.params.meal_id}`)
+      .then(results => ctx.meal = results[0])
+      .then(callback)
+      .catch(errorCallback);
+
+  Meal.fetchCategories = (ctx, callback) =>
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/categories/${ctx.params.meal_id}`)
+      .then(results => ctx.meal = results[0])
+      .then(callback)
+      .catch(errorCallback);
+
+  Meal.fetchArea = (ctx, callback) =>
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/Area/${ctx.params.meal_id}`)
+      .then(results => ctx.meal = results[0])
+      .then(callback)
+      .catch(errorCallback);
+//These are searching in Api URL to bring back pages.
   Meal.searchByIngredients = (ingredients, callback) => {
     $.get(`localhost:3000/api/recipes/ingredients/`, ingredients)
       .then(Meal.loadAll)
@@ -70,21 +86,8 @@ var app = app || {};
       method: 'DELETE',
     })
 
-  Meal.find = (meal, callback) =>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    module.Meal = Meal;
+  module.Meal = Meal;
 
 })(app)
 
