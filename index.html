@@ -5,15 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Recip.me</title>
+  <title> CookList </title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="modules/about-us.css">
-  <link rel="stylesheet" href="styles/main-page.css">
 
-  <!-- <link rel="stylesheet" href="styles/reset.css"> -->
+  <link rel="stylesheet" href="styles/main-page.css">
   <link rel="stylesheet" href="modules/about-us.css">
   <link rel="stylesheet" href="styles/main-page.css">
 
@@ -22,7 +21,7 @@
       <img src="{{strMealThumb}}">
       <h2>{{strMeal}}</h2>
       <!-- <button data-meal-id="{{idMeal}}">Cook Me!</button> -->
-      <a href="meal/{{idMeal}}">Cook Me!</a>
+      <a href="meal/{{idMeal}}"> Cook Me! </a>
     </article>
   </script>
 
@@ -34,17 +33,17 @@
     <nav class="clearfix">
       <ul>
         <li id="menu" class="icon-menu"></li>
-        <li class="nav"><a href="/"> Search </a></li>
-        <li class="nav"><a href="meal"> Cook</a></li>
         <li class="nav"><a href="/about">About Us</a></li> 
+        <li class="nav"><a href="/meal"> Cook</a></li>
+        <li class="nav"><a href="/search"> Search </a></li>
       </ul>
     
-      <div id="social">
-          <ul>
-            <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"></a></li>
-            <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"></a></li>
-          </ul>
-        </div>
+  <!-- <div id="social"> -->
+      <ul>
+        <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"><img src="img/linkedin.svg"></a></li>
+        <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"> <img src="img/github.svg"></a></li>
+      </ul>
+        <!-- </div> -->
       
   </header>
   
@@ -54,7 +53,7 @@
 
     <div class="filters">
       <section id="recipe-ingredients" class="tab-content">
-        <!-- <ul id="ingredients">
+        <ul id="ingredients">
 
     <section id="search-view" class="tab-content">
       <div class="filters">
@@ -81,18 +80,20 @@
                 <option value="">-- By Area --</option>
               </select>
           </li> 
-        </ul> -->
-        <input type="radio" name="searchDimension" value="ingredient" />ingredients<br/>
+        </ul>
+
+        <!-- RADIO BUTTONS FOR TESTING -->
+        <!-- <input type="radio" name="searchDimension" value="ingredient" />ingredients<br/>
         <input type="radio" name="searchDimension" value="name" />name<br/>
         <input type="radio" name="searchDimension" value="category" />category<br/>
-        <input type="radio" name="searchDimension" value="area" />area<br/>
+        <input type="radio" name="searchDimension" value="area" />area<br/> -->
 
-        <!-- put a  text input field here-- -->
+        <!-- put a  text input field here -->
         <input type="text" size="30" value="type here" id="searchByMealDimensionQualifier">
-        <button id="performMealSearchButon">Search!!!!!!!!</button>
+        <button id="performMealSearchButton"> Feed Me !</button>
 
         <div id="meals">
-          <h2>Meals to choose from</h2>
+          <h2> Meals to Choose From </h2>
         </div>
 
       </div>
@@ -171,7 +172,7 @@
         <img class="bio-pic" src="img/IMG_5163.jpg">
         <p> Sam is originally from a small town in Texas with a BA in Psychology.  She's been in technology, in some form or fashion, for many years with coding being the latest iteration.  She aspires to use her coding skills to assist a state-level senior organization with a website rewrite as well as learning more about about backend development scripting. </p>
       </section>
-    </section>
+    </main>
 
     <!-- External CDNs Resources-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -187,7 +188,7 @@
 
     <script src="scripts/views/meal-view.js"></script>
     <script src="scripts/controllers/routes.js"></script>
-    
+    <script> app.mealView.initSearchFormPage() </script>
 
 
 </body>
