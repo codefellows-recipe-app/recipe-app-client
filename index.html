@@ -35,8 +35,8 @@
       <ul>
         <li id="menu" class="icon-menu"></li>
         <li class="nav"><a href="/"> Search </a></li>
-        <li class="nav"><a href="/recipe/cook-stuff"> Cook (Placeholder link)</a></li>
-        <li class="nav"><a href="/recipe/about-us"> About Us (Placeholder link) </a></li> 
+        <li class="nav"><a href="/cook"> Cook</a></li>
+        <li class="nav"><a href="/about">About Us</a></li> 
       </ul>
     
       <div id="social">
@@ -51,8 +51,8 @@
   <main>
     <h1> CookList </h1>
     
-    <div class="filters">
-      <section id="recipe-ingredients" class="tab-content">
+    <section id="search-view" class="tab-content">
+      <div class="filters">
         <ul id="ingredients">
           <li>
             <select id="ingredient-filter">
@@ -81,8 +81,8 @@
           <h2>Meals to choose from</h2>
         </div>
 
-      </section>
-    </div>
+      </div>
+    </section>
     
   <!-- <form class="search-meal" action="   ">   need info here -->
     <!-- <input type="text" placeholder="Search Meal by Name" name="search">
@@ -161,13 +161,14 @@
     <!-- External CDNs Resources-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script> -->
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <!-- Application Resources -->
     <script src="scripts/index.js"></script>
     <script src="scripts/models/meal.js"></script>
-   <script src="scripts/views/search-view.js"></script>
+    <script src="scripts/views/search-view.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+    
 
 </body>
 <footer id="copyright">Copyright &copy;2018 CookFellows</footer>
