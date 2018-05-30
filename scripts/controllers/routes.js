@@ -22,19 +22,6 @@ page('/about', ctx => {
   console.log('page js /about route fired')
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// page('*', ctx => app.showOnly('#search-view'));
+page('*', ctx => app.showOnly('#search-view'));
 
 page ();

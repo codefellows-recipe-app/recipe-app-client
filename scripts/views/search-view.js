@@ -12,18 +12,6 @@ var app = app || {};
     app.Meal.all.forEach(meal => $('#meals').append(app.render('meal-template', meal)))
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
   module.searchView = searchView;
 
 })(app);

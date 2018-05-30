@@ -45,10 +45,15 @@ var app = app || {};
       });
   }
 
-  // Meal.prototype.create (callback) => {
-  //   // this function is blocked until we have the post route to our internal API database working
-  //   // $.post(`${Book.ENV.apiUrl}/meals`)
-  // }
+  Meal.prototype.create = () => {
+    // BLOCKED: waiting on POST /meals route
+    $.post(`${app.ENVIRONMENT.apiUrl}/meals`)
+      .then(results => {
+        console.log(results);
+        app.mealView.initMealPage(results);
+      })
+      .catch(console.error)
+  }
 
   Meal.fetchAll = function (callback) {
     $.get(`${app.ENVIRONMENT.apiUrl}/filter.php?i=chicken%20breast`)
@@ -66,6 +71,7 @@ var app = app || {};
         console.log('results', results);
         let newMeal = new Meal (results);
         console.log('new meal', newMeal);
+        newMeal.create();
       })
       .catch(console.error);
   }
