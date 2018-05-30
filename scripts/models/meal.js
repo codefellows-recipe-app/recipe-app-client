@@ -45,9 +45,12 @@ var app = app || {};
       });
   }
 
-  Meal.fetchAll = function (callback) {
-    app.ENVIRONMENT.apiUrl = `https://www.themealdb.com/api/json/v1/1`;
+  // Meal.prototype.create (callback) => {
+  //   // this function is blocked until we have the post route to our internal API database working
+  //   // $.post(`${Book.ENV.apiUrl}/meals`)
+  // }
 
+  Meal.fetchAll = function (callback) {
     $.get(`${app.ENVIRONMENT.apiUrl}/filter.php?i=chicken%20breast`)
       .then(results => {
         Meal.all = results.meals;
@@ -58,17 +61,22 @@ var app = app || {};
   }
 
   Meal.fetchOne = (meal_id) => {
-    app.ENVIRONMENT.apiUrl = `https://www.themealdb.com/api/json/v1/1`;
     $.get(`${app.ENVIRONMENT.apiUrl}/lookup.php?i=${meal_id}`)
       .then(results => {
-        console.log(results);
+        console.log('results', results);
+        let newMeal = new Meal (results);
+        console.log('new meal', newMeal);
       })
       .catch(console.error);
-  } 
+  }
 
   //sending requests to server
   Meal.fetchIngredients = (ctx, callback) =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/ingredients)${ctx.params.idMeal}`)
+      .then(results => {
+        console.log(results);
+        if (callback) callback();
+      })
 
   Meal.fetchName = (ctx, callback) =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/name/${ctx.params.meal_id}`)
