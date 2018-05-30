@@ -51,9 +51,15 @@
   <main>
     <h1> CookList </h1>
     
+
+    <div class="filters">
+      <section id="recipe-ingredients" class="tab-content">
+        <!-- <ul id="ingredients">
+
     <section id="search-view" class="tab-content">
       <div class="filters">
         <ul id="ingredients">
+
           <li>
             <select id="ingredient-filter">
               <option value="">-- By Ingredient --</option>
@@ -75,7 +81,15 @@
                 <option value="">-- By Area --</option>
               </select>
           </li> 
-        </ul>
+        </ul> -->
+        <input type="radio" name="searchDimension" value="ingredient" />ingredients<br/>
+        <input type="radio" name="searchDimension" value="name" />name<br/>
+        <input type="radio" name="searchDimension" value="category" />category<br/>
+        <input type="radio" name="searchDimension" value="area" />area<br/>
+
+        <!-- put a  text input field here-- -->
+        <input type="text" size="30" value="type here" id="searchByMealDimensionQualifier">
+        <button id="performMealSearchButon">Search!!!!!!!!</button>
 
         <div id="meals">
           <h2>Meals to choose from</h2>
@@ -165,12 +179,16 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <!-- Application Resources -->
-    <script src="scripts/index.js"></script>
     <script src="scripts/models/meal.js"></script>
     <script src="scripts/views/search-view.js"></script>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/views/routes.js"></script>
+
     <script src="scripts/views/meal-view.js"></script>
     <script src="scripts/controllers/routes.js"></script>
     
+
 
 </body>
 <footer id="copyright">Copyright &copy;2018 CookFellows</footer>

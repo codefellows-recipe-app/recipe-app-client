@@ -2,13 +2,34 @@
 var app = app || {};
 
 (function (module) {
-  const mealView = {};
 
-  // BLOCKED: waiting on POST /meals route, so that we know waht data structure we have to work with and render on the meal page
-  mealView.initMealPage = function (mealData) {
-    console.log(mealData);
+
+
+  mealView.initSearchFormPage = function () {
+    app.showOnly('.search-view');
+
+    $('#add the tag here').on('submit', function (event) {
+
+      event.preventDefault();
+
+
+      let meal = {
+        name: event.target.name.value || '',
+        ingredients: event.target.ingredients.value || '',
+        area: event.target.area.value || '',
+        categories: event.target.categories.value || '',
+      };
+
+      module.Book.find(book, bookView.initSearchResultsPage);
+
+
+      event.target.name.value = '';
+      event.target.ingredients.value = '';
+      event.target.area.value = '';
+      event.target.categories.value = '';
+    })
   }
 
-  module.mealView = mealView;
+})(app)
 
-})(app);
+

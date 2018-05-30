@@ -45,6 +45,8 @@ var app = app || {};
       });
   }
 
+
+
   Meal.prototype.create = () => {
     // BLOCKED: waiting on POST /meals route
     $.post(`${app.ENVIRONMENT.apiUrl}/meals`)
@@ -54,6 +56,7 @@ var app = app || {};
       })
       .catch(console.error)
   }
+
 
   Meal.fetchAll = function (callback) {
     $.get(`${app.ENVIRONMENT.apiUrl}/filter.php?i=chicken%20breast`)
