@@ -5,14 +5,25 @@ var app = app || {};
 
   const mealView = {};
 
-  app.mealView.initMealPage = function () {
+  mealView.initMealPage = function (mealId) {
     app.showOnly('#meal-view');
 
-    $('#meal-view').empty();
-    .append()
-    })
+    $('#meal-ingredients').empty();
+    $('#meal-instructions').empty();
+
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipe/${mealId}`)
+      .then(mealData => {
+        $('#meal-name').text(mealData.name);
+        $('#meal-image').attr('src', mealData.thumb);
+
+        mealData.ingredients.forEach(ingredient => {
+          $('#meal-ingredients').append(`<li><input type="checkbox">${ingredient.measure} ${ingredient.name}</li>`)
+        })
+
+        mealData.instructions.forEach(instruction => {
+          $('#meal-instructions').append(`<li><input type="checkbox">${instruction.body}</li>`);
+        })
+      })
   }
-
   module.mealView = mealView;
-
 })(app)
