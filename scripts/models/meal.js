@@ -59,14 +59,16 @@ var app = app || {};
 
 
   Meal.fetchAll = function (callback) {
-    $.get(`${app.ENVIRONMENT.apiUrl}/filter.php?i=chicken%20breast`)
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/name/chicken`)
       .then(results => {
-        Meal.all = results.meals;
-        console.log(Meal.all);
+        console.log(results);
+        Meal.all = results;
         if (callback) callback();
       })
       .catch(console.error);
   }
+
+  // 'http://localhost:3000/api/json/recipes/name/chicken'
 
   Meal.fetchOne = (meal_id) => {
     $.get(`${app.ENVIRONMENT.apiUrl}/lookup.php?i=${meal_id}`)

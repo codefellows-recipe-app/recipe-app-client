@@ -14,8 +14,8 @@ page('/search', ctx => {
 
 page('/meal', ctx => {
   console.log('page js /cook route fired');
-  // app.mealView.initMealPage();
   app.showOnly('#meal-view');
+  app.mealView.initMealPage(52850);
 })
 
 page('/about', ctx => {
@@ -24,8 +24,8 @@ page('/about', ctx => {
 })
 
 page('/meal/:meal_id', ctx => {
-  console.log('page js /cook route fired', ctx.params.meal_id)
-  app.Meal.fetchOne(ctx.params.meal_id);
+  console.log('page js /cook route fired', ctx.params.meal_id);
+  app.mealView.initMealPage(ctx.params.meal_id);
 })
 
 page('*', ctx => app.showOnly('#search-view'));
