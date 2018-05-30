@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,35 +10,19 @@
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="modules/about-us.css">
   <link rel="stylesheet" href="styles/main-page.css">
 
-  <script id="recipe-show-template" type="text/x-handlebars-template">
-    <article class="clearfix" data-recipe="{{recipeName}}" data-category="{{category}}">
-      <header>
-        <h1>{{{RecipeName}}}</h1>
-        <div>
-          <address><a href="{{recipeUrl}}">{{recipeUrl}}</a></address>
-        </div>
-      </header>
-      <section class="recipe-body"> {{{ RecipeText}}}</section>
-      <!-- <section class="ingredients-body">{{{Ingredients}}}</section>
-      <section class="instructions-body">{{{Instructions}}}</section> -->
-      <!-- <a href="#" class="read-on">Read on &rarr;</a> -->
-    </article>
-  </script>
+  <!-- <link rel="stylesheet" href="styles/reset.css"> -->
+  <link rel="stylesheet" href="modules/about-us.css">
+  <link rel="stylesheet" href="styles/main-page.css">
 
-  <script id="recipe-cook-template" type="text/x-handlebars-template">
-    <article class="clearfix" data-recipe="{{recipeName}}" data-category="{{category}}">
-      <header>
-        <div>
-          <address><a href="{{recipeUrl}}">{{recipeUrl}}</a></address>
-        </div>
-        <h1>{{{RecipeName}}}</h1>
-      </header>
-      <section class="ingredients-body">{{{Ingredients}}}</section>
-      <section class="instructions-body">{{{Instructions}}}</section>
+  <script id="meal-template" type="text/x-handlebars-template">
+    <article data-meal-id="{{idMeal}}">
+      <img src="{{strMealThumb}}">
+      <h2>{{strMeal}}</h2>
+      <!-- <button data-meal-id="{{idMeal}}">Cook Me!</button> -->
+      <a href="meal/{{idMeal}}">Cook Me!</a>
     </article>
   </script>
 
@@ -82,14 +67,20 @@
           <li>
               <select id="category-filter">
                 <option value="">-- By Category --</option>
+
               </select>
             </li> 
           <li>
               <select id="area-filter">
                 <option value="">-- By Area --</option>
               </select>
-            </li> 
+          </li> 
         </ul>
+
+        <div id="meals">
+          <h2>Meals to choose from</h2>
+        </div>
+
       </section>
     </div>
     
@@ -106,9 +97,6 @@
   <h3> FOR TESTING PURPOSES H3 </h3> 
   <h4> FOR TESTING PURPOSES H4 </h4> 
   <h5> FOR TESTING PURPOSES H5 </h5> 
-<!-- These need to go in Handlebars template format -->
-
-
 
     <section class="card">
       <img src=" put image url here ">
@@ -123,7 +111,9 @@
 
 <div class="recipe-add container">
 <section id="write" class="tab-content">
+
     <h2> Add a New Recipe </h2>
+
     <p> Called recipe-add </p> 
     <fieldset>
     <form action="#" id="new-recipe">
@@ -135,6 +125,7 @@
       </label>
       <textarea id="recipe-ingredients-body" rows="8" cols="40" placeholder=" Ingredients" required></textarea>
       <textarea id="recipe-instructions-body" rows="8" cols="40" placeholder=" Instructions" required></textarea>
+
       <label>
         <input type="text" id="recipe-category" placeholder="Category" required>
       </label>
@@ -167,13 +158,17 @@
       </section>
   </div>
 
+    <!-- External CDNs Resources-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script> -->
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
+    <!-- Application Resources -->
+    <script src="scripts/index.js"></script>
     <script src="scripts/models/meal.js"></script>
-    <script src="scripts/recipe.js"></script>
-    <script src="scripts/recipeView.js"></script>
+   <script src="scripts/views/search-view.js"></script>
 
 </body>
-<footer id="copyright"> Copyright &copy;2018 CookFellows</footer>
+<footer id="copyright">Copyright &copy;2018 CookFellows</footer>
 </html>

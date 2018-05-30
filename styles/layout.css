@@ -1,3 +1,4 @@
+
 /* === OVERALL LAYOUT RULES === */
 
 
@@ -5,6 +6,11 @@
 h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 3em;
+
+/* === OVERALL LAYOUT RULES === */
+
+h1 {
+  font-size: 2em;
   margin: .5em;
   padding: .5em; 
   text-align: center
@@ -16,6 +22,7 @@ h2 {
   text-align: center
 }
 
+ 
 p {
   font-family: 'Architects Daughter', cursive;
   font-size: 1em;
@@ -24,7 +31,7 @@ p {
   padding: .5em;
   text-align: justify;
 }
-
+  
 ul li {
   float: right;
   list-style-type: none;
@@ -80,13 +87,24 @@ img {
 
   select {
     width: 12em;
+
+@media only screen and (min-width: 640px) {
+  header section {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+
+  select {
+    width: 15em;
     margin: .2em .2em;
   }
 
   #filters li {
     display: inline;
+
     margin: 5px;
     padding: 5px;
+
   }
 }
 
@@ -98,4 +116,5 @@ img {
 #copyright{
   color: lightslategray;
   text-align: center;
-}
+  }
+
