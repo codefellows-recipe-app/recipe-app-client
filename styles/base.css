@@ -1,0 +1,24 @@
+* {
+  color: black;
+}
+
+/*  === OTHER COLORS IN COLOR SCHEME === 
+    FloralWhite       - fffaf0
+    a dark red        - 780116
+    a charcoal        - 272d2d
+    a medium dk green - 49a078
+    a pumpkin         - d96c06  */
+
+html body main {
+  background-color: floralwhite;
+  /* background-color: papayawhip;  */
+}
+
+/* 
+h4 {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+h5 {
+  font-family: 'Caveat', cursive;
+} */
