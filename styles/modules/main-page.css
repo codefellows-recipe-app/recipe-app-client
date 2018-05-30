@@ -8,19 +8,70 @@ html body main {
   background-color: floralwhite;
   /* background-color: papayawhip;  */
 }
+ 
+/* == STYLING FOR SEARCH NAV / SEARCH BAR == */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
 
-/* Style the search field */
-form.example input[type=text] {
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+/* ==Style the search field */
+/* form.example input[type=text] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
   float: left;
   width: 80%;
   background: #f1f1f1;
-}
+} */
 
 /* Style the submit button */
-form.example button {
+/* form.example button {
   float: left;
   width: 20%;
   padding: 10px;
@@ -29,19 +80,19 @@ form.example button {
   font-size: 17px;
   border: 1px solid grey;
   border-left: none; /* Prevent double borders */
-  cursor: pointer;
+  /* cursor: pointer;
 }
 
 form.example button:hover {
   background: #0b7dda;
-}
+} */ */
 
 /* Clear floats */
-form.example::after {
+/* form.example::after {
   content: "";
   clear: both;
   display: table;
-}
+} */ 
 
 #copyright {
   font-size: .5em

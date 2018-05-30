@@ -9,7 +9,7 @@ var app = app || {};
   }
 
   searchView.renderAll = () => {
-    app.Meal.all.forEach(meal => $('#meals').append(app.render('meal-template', meal)))
+    app.Meal.all.forEach(meal => $('#meals').append(app.render('#meal-template', meal)))
   }
 
 

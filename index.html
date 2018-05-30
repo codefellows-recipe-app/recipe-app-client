@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,52 +28,33 @@
 <body>
 
   <header>
-    <h1> CookList </h1>
     <nav class="clearfix">
       <ul>
         <li id="menu" class="icon-menu"></li>
         <li class="nav"><a href="/about">About Us</a></li> 
-        <li class="nav"><a href="/meal"> Cook</a></li>
+        <li class="nav"><a href="/meal"> Surprise Me ! </a></li>
         <li class="nav"><a href="/search"> Search </a></li>
       </ul>
-    
-  <!-- <div id="social"> -->
-      <ul>
-        <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"><img src="img/linkedin.svg"></a></li>
-        <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"> <img src="img/github.svg"></a></li>
-      </ul>
-        <!-- </div> -->
       
   </header>
   
   <main>
     <section id="search-view" class="tab-content">
-      <div class="filters">
-        <ul id="ingredients">
+      <div class="filters"> 
+          <!-- These are the "buttons" to use to search -->
+        <a href="#about"> Ingredient </a>
+        <a href="#contact"> Recipe Name </a>
+        <a href="#contact"> Category </a>
+        <a href="#contact"> Area </a>
 
-          <li>
-            <select id="ingredient-filter">
-              <option value="">-- By Ingredient --</option>
-            </select>
-          </li>
-          <li>
-            <select id="recipe-name-filter">
-              <option value="">-- By Recipe Name --</option>
-            </select>
-          </li> 
-          <li>
-              <select id="category-filter">
-                <option value="">-- By Category --</option>
-
-              </select>
-            </li> 
-          <li>
-              <select id="area-filter">
-                <option value="">-- By Area --</option>
-              </select>
-          </li> 
-        </ul>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </div>
+    </div>
+      <!-- </div> -->
 
       <!-- RADIO BUTTONS FOR TESTING -->
       <!-- <input type="radio" name="searchDimension" value="ingredient" />ingredients<br/>
@@ -84,7 +64,7 @@
 
       <!-- put a  text input field here -->
       <input type="text" size="30" value="type here" id="searchByMealDimensionQualifier">
-      <button id="performMealSearchButton"> Feed Me !</button>
+      <button id="performMealSearchButton"> Help Me Cook </button>
 
       <div id="meals">
         <h2> Meals to Choose From </h2>
@@ -98,7 +78,7 @@
 
   <section id="meal-view" class="tab-content">
     <h2 id="recipe-name"> Recipe Name </h2>
-    <img src="https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg">
+    <img class="meal-pic" src="https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg">
     <ul id="meal-ingredients"></ul>
     <ul id="meal-instructions"></ul>
   </section>
@@ -176,5 +156,13 @@
 
 
 </body>
-<footer id="copyright">Copyright &copy;2018 CookFellows</footer>
+<footer id="copyright">Copyright &copy;2018 CookFellows
+  <div id="social">
+      <ul>
+          <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"><img src="img/linkedin.svg"></a></li>
+          <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"> <img src="img/github.svg"></a></li>
+        </ul>
+  </div>
+
+</footer>
 </html>
