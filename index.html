@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="modules/about-us.css">
+  <link rel="stylesheet" href="styles/main-page.css">
+
   <!-- <link rel="stylesheet" href="styles/reset.css"> -->
   <link rel="stylesheet" href="modules/about-us.css">
   <link rel="stylesheet" href="styles/main-page.css">
@@ -23,24 +26,9 @@
     </article>
   </script>
 
-  <!-- <script id="recipe-cook-template" type="text/x-handlebars-template">
-    <article class="clearfix" data-recipe="{{recipeName}}" data-category="{{category}}">
-      <header>
-        <div>
-          <address><a href="{{recipeUrl}}">{{recipeUrl}}</a></address>
-        </div>
-        <h1>{{{RecipeName}}}</h1>
-      </header>
-      <section class="ingredients-body">{{{Ingredients}}}</section>
-      <section class="instructions-body">{{{Instructions}}}</section>
-    </article>
-  </script> -->
-
-
 </head>
 
 <body>
-
 
   <header>
     <nav class="clearfix">
@@ -51,6 +39,13 @@
         <li class="nav"><a href="/recipe/about-us"> About Us (Placeholder link) </a></li> 
       </ul>
     
+      <div id="social">
+          <ul>
+            <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"></a></li>
+            <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"></a></li>
+          </ul>
+        </div>
+      
   </header>
   
   <main>
@@ -61,30 +56,30 @@
         <ul id="ingredients">
           <li>
             <select id="ingredient-filter">
-              <option value="">-- Search by Ingredient --</option>
+              <option value="">-- By Ingredient --</option>
             </select>
           </li>
           <li>
             <select id="recipe-name-filter">
-              <option value="">-- Search by Recipe Name --</option>
+              <option value="">-- By Recipe Name --</option>
             </select>
           </li> 
           <li>
               <select id="category-filter">
-                <option value="">-- Search by Category --</option>
+                <option value="">-- By Category --</option>
+
               </select>
             </li> 
           <li>
               <select id="area-filter">
-                <option value="">-- Search by Area --</option>
+                <option value="">-- By Area --</option>
               </select>
-            </li> 
+          </li> 
         </ul>
 
         <div id="meals">
           <h2>Meals to choose from</h2>
         </div>
-
 
       </section>
     </div>
@@ -98,9 +93,10 @@
 <div class="recipe-view recipe-show-template container">
   <h2> Recipe Options: </h2>
   <p> Called recipe-view and recipe-show-template </p>
-<!-- These need to go in Handlebars template format -->
 
-
+  <h3> FOR TESTING PURPOSES H3 </h3> 
+  <h4> FOR TESTING PURPOSES H4 </h4> 
+  <h5> FOR TESTING PURPOSES H5 </h5> 
 
     <section class="card">
       <img src=" put image url here ">
@@ -115,7 +111,9 @@
 
 <div class="recipe-add container">
 <section id="write" class="tab-content">
-    <h1> Add a New Recipe </h1>
+
+    <h2> Add a New Recipe </h2>
+
     <p> Called recipe-add </p> 
     <fieldset>
     <form action="#" id="new-recipe">
@@ -127,9 +125,7 @@
       </label>
       <textarea id="recipe-ingredients-body" rows="8" cols="40" placeholder=" Ingredients" required></textarea>
       <textarea id="recipe-instructions-body" rows="8" cols="40" placeholder=" Instructions" required></textarea>
-      <!-- <label>
-        <input type="text" id="recipt-author" placeholder="Author Name" required>
-      </label> -->
+
       <label>
         <input type="text" id="recipe-category" placeholder="Category" required>
       </label>
@@ -158,10 +154,9 @@
         <p> Kevin brought all his gaming skills to bear -- setting up scaffolding over the holiday weekend.  </p>
         <title> Sam Porter Giffords </title>
         <img class="bio-pic" src="img/IMG_5163.jpg">
-        <p> Sam cranked up her ninja skills (yeah, Po -- annnnd. . . ? and busted out the index.html page with some css.  Whaaaaa ?  </p>
+        <p> Sam is originally from a small town in Texas with a BA in Psychology.  She's been in technology, in some form or fashion, for many years with coding being the latest iteration.  She aspires to use her coding skills to assist a state-level senior organization with a website rewrite as well as learning more about about backend development scripting. </p>
       </section>
   </div>
-
 
     <!-- External CDNs Resources-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
