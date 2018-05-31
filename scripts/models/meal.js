@@ -61,7 +61,6 @@ var app = app || {};
   Meal.fetchAll = function (callback) {
     $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/name/chicken`)
       .then(results => {
-        console.log(results);
         Meal.all = results;
         if (callback) callback();
       })
