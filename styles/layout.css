@@ -1,6 +1,8 @@
 
 /* === OVERALL LAYOUT RULES === */
-
+.sticky-footer-wrapper {
+  height: calc(100vh - 120px);
+}
 
 /* === FONT SELECTION & SIZING === */
 h1 {
