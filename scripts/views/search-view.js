@@ -5,7 +5,25 @@ var app = app || {};
   const searchView = {};
 
   searchView.initSearchPage = function () {
-    app.Meal.fetchAll(searchView.renderAll);
+
+    $('#search-form').on('submit', function (event) {
+      event.preventDefault();
+      $('#meals').empty();
+
+
+      
+      let searchType = $('input[name=search-type]:checked').val();
+      let searchText = $('#search-text').val();
+
+      console.log(searchType, searchText);
+      
+      
+      
+      
+      
+      let queryString = `/api/json/recipes/${searchType}/${searchText}`
+      app.Meal.fetchAll(queryString);
+    })
   }
 
   searchView.renderAll = () => {
