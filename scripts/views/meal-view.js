@@ -1,6 +1,5 @@
 'use strict';
 var app = app || {};
-var counter = 1, counter2 = 1;
 
 (function (module) {
 
@@ -12,10 +11,6 @@ var counter = 1, counter2 = 1;
     $('#meal-ingredients').empty();
     $('#meal-instructions').empty();
 
-    // $('#meal-ingredients').on('change',(e) => {
-    //   $(this).parent().css('text-decoration', 'line-through');
-    // });
-    
     $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipe/${mealId}`)
       .then(mealData => {
         $('#meal-name').text(mealData.name);
