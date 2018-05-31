@@ -58,12 +58,12 @@ var app = app || {};
   }
 
 
-  Meal.fetchAll = function (callback) {
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipes/name/chicken`)
+  Meal.fetchAll = function (queryString) {
+    console.log(`${app.ENVIRONMENT.apiUrl}${queryString}`);
+    $.get(`${app.ENVIRONMENT.apiUrl}${queryString}`)
       .then(results => {
-        console.log(results);
         Meal.all = results;
-        if (callback) callback();
+        app.searchView.renderAll();
       })
       .catch(console.error);
   }
