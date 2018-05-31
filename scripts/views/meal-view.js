@@ -16,7 +16,6 @@ var counter = 1, counter2 = 1;
     //   $(this).parent().css('text-decoration', 'line-through');
     // });
 
-    
     $.get(`${app.ENVIRONMENT.apiUrl}/api/json/recipe/${mealId}`)
       .then(mealData => {
         $('#meal-name').text(mealData.name);
@@ -35,28 +34,26 @@ var counter = 1, counter2 = 1;
         })
       });
 
-   
 
+    console.log($('#meal-image').attr('id'));
 
-    // console.log($('#meal-image').attr('id'));
+    $('#strikeThrough').change(function () {
+      // console.log('changed')
+      if (this.checked) {
+        console.log($(this).wrap());
 
-    // $('#strikeThrough').change(function () {
-    //   // console.log('changed')
-    //   if (this.checked) {
-    //     console.log($(this).wrap());
+      }
+    });
+  }
+  module.mealView = mealView;
 
-    //   }
-    // });
-//   }
-//   module.mealView = mealView;
- 
-//   $(document).ready(function() {
-//     $("input[type='checkbox']").keypress(function (){
-//       console.log("printed:" + counter);
-//     });
-//   });
+  // $(document).ready(function() {
+  //   $('input[type=\'checkbox\']').keypress(function (){
+  //     console.log('printed:' + counter);
+  //   });
+  // });
 
-// })(app);
+})(app);
 
 // $(function () {
 //   $("#strikeThrough1").change(function(){
@@ -71,7 +68,7 @@ var counter = 1, counter2 = 1;
 //   $(appendID).change(function () {
 //     console.log("clicked");
 //   });
-//}
+// }
 
 
 
