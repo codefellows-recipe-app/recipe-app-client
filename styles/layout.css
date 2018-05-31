@@ -1,6 +1,12 @@
 
 /* === OVERALL LAYOUT RULES === */
+.sticky-footer-wrapper {
+  min-height: calc(100vh - 120px);
+}
 
+footer {
+  height: 120px;
+}
 
 /* === FONT SELECTION & SIZING === */
 h1 {
@@ -27,9 +33,15 @@ p {
   padding: .5em;
   text-align: justify;
 }
-  
-ul li {
+
+nav ul,
+nav li,
+#social ul,
+#social li {
   float: right;
+}
+
+ul li {
   list-style-type: none;
   margin: 0 .5em;
   padding: 0
