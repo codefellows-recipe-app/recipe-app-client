@@ -62,6 +62,8 @@ var app = app || {};
     console.log(`${app.ENVIRONMENT.apiUrl}${queryString}`);
     $.get(`${app.ENVIRONMENT.apiUrl}${queryString}`)
       .then(results => {
+        console.log('results ===>', results);
+        results === null ? Meal.all = [] : Meal.all = results;
         Meal.all = results;
         app.searchView.renderAll();
       })
