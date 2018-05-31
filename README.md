@@ -17,6 +17,7 @@ Download our app through github and enjoy!
 * AJAX
 * SMACSS/RWD design principles
 * IcoMoon icons
+* Googleapi fonts
 * Express
 * Node
 * postgres
@@ -24,6 +25,8 @@ Download our app through github and enjoy!
 ## Change Log
 05-28-2018 3:45pm - Application is getting scaffolded. 
 05-28-2018 4:00pm - Added icons and continuing with the scaffolding. 
+05-30-2018 10:00am - Images and data are displaying on the page.
+05-30-2018 11:15am - Constructor now lives on the back end.
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

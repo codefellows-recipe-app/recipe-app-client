@@ -3,7 +3,7 @@ var app = app || {};
 
 (function(module){
 
-  let productionApiUrl = 'https://www.themealdb.com/api/json/v1/1/';
+  let productionApiUrl = 'https://cooklist-recipe-app.herokuapp.com/';
   let developmentApiUrl = 'http://localhost:3000';
 
   module.isProduction= /^(?!localhost|127)/.test(window.location.hostname);
@@ -13,7 +13,7 @@ var app = app || {};
   };
 
   module.showOnly = (selector) => {
-    $('.container').hide();
+    $('.tab-content').hide();
     $(selector).show();
   };
 
