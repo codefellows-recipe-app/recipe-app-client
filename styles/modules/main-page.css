@@ -99,14 +99,16 @@ form.example button:hover {
   font-size: .5em
 }
 
-/* MEAL-VIEW MEAL CARDS */
+/* SEARCH-VIEW MEAL CARDS */
 .meal-card {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
+  border-radius: 5px;
   margin: 1em;
+  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
 }
 
 .meal-card > * {
@@ -124,8 +126,19 @@ form.example button:hover {
   text-decoration: underline;
 }
 
+.meal-card p {
+  display: none;
+}
+
+/* MEAL VIEW */
+
+#meal-view li {
+  display: block;
+}
 
 @media only screen and (min-width: 640px) {
+  
+  /* MEAL CARDS */
   .meal-card {
     flex-direction: row;
     flex-wrap: wrap;
@@ -133,5 +146,9 @@ form.example button:hover {
   
   .meal-card > * {
     width: 40%;
+  }
+
+  .meal-card p {
+    display: initial;
   }
 }
