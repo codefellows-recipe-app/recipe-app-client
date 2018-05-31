@@ -14,56 +14,64 @@
   <link rel="stylesheet" href="styles/modules/about-us.css">
 
   <script id="meal-template" type="text/x-handlebars-template">
-    <article data-meal-id="{{idMeal}}">
+    <article class= "meal-card" data-meal-id="{{idMeal}}">
+      <div>
+        <h2>{{strMeal}}</h2>
+        <p>{{strInstructions}}</p>
+        <a href="meal/{{idMeal}}">Cook Me!</a>
+      </div>
       <img src="{{strMealThumb}}">
-      <h2>{{strMeal}}</h2>
-      <a href="meal/{{idMeal}}">Cook Me!</a>
     </article>
   </script>
 
 </head>
 
 <body>
+  <div class="sticky-footer-wrapper">
+    <header>
+      <nav class="clearfix">
+        <ul>
+          <li id="menu" class="icon-menu"></li>
+          <li class="nav"><a href="/about">About Us</a></li> 
+          <li class="nav"><a href="/meal"> Surprise Me ! </a></li>
+          <li class="nav"><a href="/search"> Search </a></li>
+        </ul>
+    </header>
+    
+    <main>
+      <section id="search-view" class="tab-content">
 
-  <header>
-    <nav class="clearfix">
-      <ul>
-        <li id="menu" class="icon-menu"></li>
-        <li class="nav"><a href="/about">About Us</a></li> 
-        <li class="nav"><a href="/meal"> Surprise Me ! </a></li>
-        <li class="nav"><a href="/search"> Search </a></li>
-      </ul>
-  </header>
-  
-  <main>
-    <section id="search-view" class="tab-content">
 
-      <div class="search-container">
-        <form id="search-form">
-          <label>Recipe Name<input type="radio" name="search-type" value="name"></label>
-          <label>Ingredients<input type="radio" name="search-type" value="ingredients"></label>
-          <label>Category<input type="radio" name="search-type" value="category"></label>
-          <label>Region<input type="radio" name="search-type" value="area"></label>
-          
-          <input type="text" placeholder="Search.." id="search-text">
-          <button type="submit">Search!</button>
-        </form>
-      </div>
-    </div>
+        <div class="search-container">
+          <form id="search-form">
+            <label>Recipe Name<input type="radio" name="search-type" value="name"></label>
+            <label>Ingredients<input type="radio" name="search-type" value="ingredients"></label>
+            <label>Category<input type="radio" name="search-type" value="category"></label>
+            <label>Region<input type="radio" name="search-type" value="area"></label>
+            
+            <input type="text" placeholder="Search.." id="search-text">
+            <button type="submit">Search!</button>
+          </form>
+        </div>
 
-      <div id="meals">
-        <h2> Meals to Choose From </h2>
-      </div>
-    </section>
 
-  <section id="meal-view" class="tab-content">
+        <div id="meals">
+          <h2> Meals to Choose From </h2>
+        </div>
+      </section>
+        
+      <section id="meal-view" class="tab-content">
 
-    <h2 id="meal-name"> Recipe Name </h2>
-    <img id ="meal-image">
+        <h2 id="meal-name">Recipe Name</h2>
+        <img id ="meal-image">
 
-    <ul id="meal-ingredients"></ul>
-    <ol id="meal-instructions"></ol>
-  </section>
+        <h2>Ingredients</h2>
+        <ul id="meal-ingredients"></ul>
+
+        <h2>Instructions</h2>
+        <ol id="meal-instructions"></ol>
+
+      </section>
 
 <section id="about-view" class="tab-content">
     <h2> About Us </h2>
@@ -83,13 +91,24 @@
         <title> Sam Porter Giffords </title>
         <img class="bio-pic" src="img/spgiffords.jpg">
         <p> Sam is originally from a small town in Texas with a BA in Psychology.  She's been in technology, in some form or fashion, for many years with coding being the latest iteration.  She aspires to use her coding skills to first assist a state-level senior organization with a website rewrite as well as learning more about about backend development scripting. </p>
+
       </section>
     </main>
+  </div><!-- end of stick-footer-wrapper -->
+  
+  <footer id="copyright" class="clearfix">Copyright &copy;2018 CookFellows
+    <div id="social">
+      <ul>
+        <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"><img src="img/linkedin.svg"></a></li>
+        <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"><img src="img/github.svg"></a></li>
+      </ul>
+    </div>
+  </footer>
 
     <!-- External CDNs Resources-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <!-- Application Resources -->
     <script src="scripts/index.js"></script>
@@ -98,14 +117,5 @@
     <script src="scripts/views/meal-view.js"></script>
     <script src="scripts/controllers/routes.js"></script>
 
-</body>
-<footer id="copyright">Copyright &copy;2018 CookFellows
-  <div id="social">
-      <ul>
-          <li class="nav"><a href="http://linkedin.com" target="_blank" class="icon-linkedin"><img src="img/linkedin.svg"></a></li>
-          <li class="nav"><a href="http://github.com" target="_blank" class="icon-github"> <img src="img/github.svg"></a></li>
-        </ul>
-  </div>
-
-</footer>
+  </body>
 </html>

@@ -72,6 +72,15 @@ html body main {
 .topnav .search-container button:hover {
   background: #ccc;
 }
+
+#meal-ingredients input:checked + label {
+  text-decoration: line-through;
+}
+
+#meal-instruction input:checked + label {
+  text-decoration: line-through;
+}
+
 /* ==Style the search field */
 /* form.example input[type=text] {
   padding: 10px;
@@ -109,4 +118,58 @@ form.example button:hover {
 
 #copyright {
   font-size: .5em
+}
+
+/* SEARCH-VIEW MEAL CARDS */
+.meal-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 1em;
+  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.meal-card > * {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-card img {
+  padding: 1em;
+}
+
+.meal-card a {
+  text-decoration: underline;
+}
+
+.meal-card p {
+  display: none;
+}
+
+/* MEAL VIEW */
+
+#meal-view li {
+  display: block;
+}
+
+@media only screen and (min-width: 640px) {
+  
+  /* MEAL CARDS */
+  .meal-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .meal-card > * {
+    width: 40%;
+  }
+
+  .meal-card p {
+    display: initial;
+  }
 }
