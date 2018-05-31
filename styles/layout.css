@@ -112,12 +112,15 @@ img {
 
 /* === MEDIA QUERY === */
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 640px) { 
+    body main {
     /* background-color: mintcream; */
-    background-color: blue;
+    /* background-color: papayawhip; */
+   background-color: turquoise;
     /* float: none;
     padding: .1em .1em .1em 2em; */ 
   } 
+}
 
   /* select {
     width: 12em;
