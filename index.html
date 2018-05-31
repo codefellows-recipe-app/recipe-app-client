@@ -46,11 +46,10 @@
 
       <div class="search-container">
         <form id="search-form">
-          <label>Recipe Name<input type="radio" name="search-type" value="name"></label>
-          <label>Ingredients<input type="radio" name="search-type" value="ingredients"></label>
-          <label>Category<input type="radio" name="search-type" value="category"></label>
-          <label>Region<input type="radio" name="search-type" value="area"></label>
-          
+          <input type="radio" name="search-type" value="name" required> Recipe Name <br />
+          <input type="radio" name="search-type" value="ingredients" required> Ingredients <br />
+          <input type="radio" name="search-type" value="category" required> Category <br />
+          <input type="radio" name="search-type" value="area" required>Region <br />
           <input type="text" placeholder="Search.." id="search-text">
           <button type="submit">Search!</button>
         </form>
