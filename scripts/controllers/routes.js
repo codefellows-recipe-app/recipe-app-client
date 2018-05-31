@@ -15,7 +15,7 @@ page('/search', ctx => {
 page('/meal', ctx => {
   console.log('page js /cook route fired');
   app.showOnly('#meal-view');
-  app.mealView.initMealPage(52850);
+  app.mealView.initMealPage('random');
 })
 
 page('/about', ctx => {

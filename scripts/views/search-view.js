@@ -2,26 +2,18 @@
 var app = app || {};
 
 (function (module) {
+
   const searchView = {};
 
   searchView.initSearchPage = function () {
-
     $('#search-form').on('submit', function (event) {
       event.preventDefault();
       $('#meals').empty();
 
-
-      
       let searchType = $('input[name=search-type]:checked').val();
       let searchText = $('#search-text').val();
-
-      console.log(searchType, searchText);
-      
-      
-      
-      
-      
       let queryString = `/api/json/recipes/${searchType}/${searchText}`
+
       app.Meal.fetchAll(queryString);
     })
   }
@@ -39,7 +31,7 @@ var app = app || {};
 
   //     if(selValue === 'ingredient') {
   //       app.Meal.searchByIngredients({ingredients: inputValue}, callback); // todod - figure out what the callback is
-  //     } 
+  //     }
   //     else if(selValue === 'name') {
   //       app.Meal.searchByName({name: inputValue}, callback); // todod - figure out what the callback is
   //     } // etc, - maybe use a switch case
