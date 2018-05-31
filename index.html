@@ -14,10 +14,13 @@
   <link rel="stylesheet" href="styles/modules/about-us.css">
 
   <script id="meal-template" type="text/x-handlebars-template">
-    <article data-meal-id="{{idMeal}}">
+    <article class= "meal-card" data-meal-id="{{idMeal}}">
+      <div>
+        <h2>{{strMeal}}</h2>
+        <p>{{strInstructions}}</p>
+        <a href="meal/{{idMeal}}">Cook Me!</a>
+      </div>
       <img src="{{strMealThumb}}">
-      <h2>{{strMeal}}</h2>
-      <a href="meal/{{idMeal}}">Cook Me!</a>
     </article>
   </script>
 

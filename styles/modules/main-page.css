@@ -98,3 +98,40 @@ form.example button:hover {
 #copyright {
   font-size: .5em
 }
+
+/* MEAL-VIEW MEAL CARDS */
+.meal-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  margin: 1em;
+}
+
+.meal-card > * {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-card img {
+  padding: 1em;
+}
+
+.meal-card a {
+  text-decoration: underline;
+}
+
+
+@media only screen and (min-width: 640px) {
+  .meal-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .meal-card > * {
+    width: 40%;
+  }
+}
