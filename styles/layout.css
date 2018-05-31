@@ -1,7 +1,11 @@
 
 /* === OVERALL LAYOUT RULES === */
 .sticky-footer-wrapper {
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+}
+
+footer {
+  height: 120px;
 }
 
 /* === FONT SELECTION & SIZING === */
