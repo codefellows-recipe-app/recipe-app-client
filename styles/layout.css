@@ -1,23 +1,92 @@
 
 /* === OVERALL LAYOUT RULES === */
+.sticky-footer-wrapper {
+  min-height: calc(100vh - 120px);
+}
 
+body {
+  max-width: 960px;
+  margin:auto;
+}
+
+footer {
+  height: 120px;
+}
+
+/* === FONT SELECTION & SIZING === */
 h1 {
-  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3em;
   margin: .5em;
   padding: .5em; 
   text-align: center
 }
 
+/* === OVERALL LAYOUT RULES === */
 h2 {
+  font-family: 'Handlee', cursive; 
   font-size: 1.5em; 
   text-align: center
 }
+ 
+p {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1em;
+  margin: .5em;
+  max-width: 90%;
+  padding: .5em;
+  text-align: justify;
+}
+
+nav ul,
+nav li,
+#social ul,
+#social li {
+  float: right;
+}
 
 ul li {
-  float: right;
   list-style-type: none;
   margin: 0 .5em;
   padding: 0
+}
+
+/* == NAV LINK STYLING == */
+
+/* unvisited link */
+a:link {
+  color: black;
+  padding: .5em; 
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #d96c06;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  background-color: #49a078;
+  color: floralwhite;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  background-color: #49a078;
+  color: black;
+  text-decoration: underline;
+}
+
+/* == MEAL-VIEW STYLING */
+
+.meal-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .container {
@@ -59,28 +128,27 @@ img {
 
 /* === MEDIA QUERY === */
 
-@media only screen and (min-width: 640px) {
-  header section {
-    padding: .1em .1em .1em 2em;
-    float: none;
-  }
-
-  select {
-    width: 15em;
-    margin: .2em .2em;
-  }
-
-  #filters li {
-    display: inline;
-  }
+@media only screen and (min-width: 640px) { 
+    body main {
+    /* background-color: mintcream; */
+    /* background-color: papayawhip; */
+   background-color: turquoise;
+    /* float: none;
+    padding: .1em .1em .1em 2em; */ 
+  } 
 }
 
-.bio-pic {
+img.bio-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-height: 40%;
   max-width: 35%;
+  width: 50%;
 }
 
 #copyright{
   color: lightslategray;
   text-align: center;
-}
+  }
+

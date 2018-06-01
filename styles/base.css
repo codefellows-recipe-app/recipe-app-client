@@ -1,8 +1,17 @@
 * {
   color: black;
-  font-family: 'Raleway', sans-serif;
+}
+
+/*  === OTHER COLORS IN COLOR SCHEME === 
+    FloralWhite       - fffaf0
+    a dark red        - 780116
+    a charcoal        - 272d2d
+    a medium dk green - 49a078
+    a pumpkin         - d96c06  */
+
+html body main {
+  background-color: floralwhite;
+  /* background-color: papayawhip;  */
 }
 
 
-/* font-family: 'Shadows Into Light', cursive;
-font-family: 'Handlee', cursive; */
