@@ -5,9 +5,21 @@
 
 /* === SPECIFIC STYLING === */
 html body main {
-  background-color: floralwhite;
+  /* background-color: floralwhite; */
   /* background-color: papayawhip;  */
+  background-color: turquoise; 
 }
+
+@media only screen and (min-width: 640px) { 
+  body main {
+  /* background-color: mintcream; */
+  background-color: papayawhip;
+ /* background-color: turquoise; */
+  /* float: none;
+  padding: .1em .1em .1em 2em; */ 
+} 
+}
+
  
 /* == STYLING FOR SEARCH NAV / SEARCH BAR == */
 .topnav {
@@ -70,76 +82,49 @@ html body main {
   text-decoration: line-through;
 }
 
-/* loading gif css styler */
-/* .like {
-  display: block;
-  width: 300px; 
-  height: 450px;
-  margin:0 auto;
-  background: url(http://gifimage.net/wp-content/uploads/2017/07/cooking-gif-1.gif) 0 0 no-repeat;
-  background-size: 100%;
-  animation: like-gif steps(28) 3s infinite both;
-}
-.pause {
-  animation-play-state: paused;
-}
-div {
-width:100px;
-margin:0 auto;
-text-align:center;
+
+/* SEARCH-VIEW SEARCH BOX */
+div.radio-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap; 
 }
 
-@keyframes like-gif {
-0% {
-  background-position: 0%;
-}
-100% {
-  background-position: 100%;
-}
-} */
-
-
-
-
-
-
-/* ==Style the search field */
-/* form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-} */
-
-
-/* Style the submit button */
-/* form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  /* cursor: pointer;
+.search-container label {
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 40%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-form.example button:hover {
-  background: #0b7dda;
-} */ */
+.search-box {
+  display: flex;
+  justify-content: space-around;
+}
 
-/* Clear floats */
-/* form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-} */ 
+.search-container input[type=text] {
+  height: 40px;
+  margin-top: 5px;
+  width: 75%;
+}
 
-#copyright {
-  font-size: .5em
+.search-container input[type=radio] {
+  display: none;
+}
+
+.search-container input[type=radio]:checked + label {
+  background-color: pink;
+}
+
+.search-container button[type=submit] {
+  height: 40px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 /* SEARCH-VIEW MEAL CARDS */
@@ -174,7 +159,6 @@ form.example button:hover {
 }
 
 /* MEAL VIEW */
-
 #meal-view li {
   display: block;
 }

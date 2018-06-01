@@ -20,25 +20,12 @@ var app = app || {};
 
   searchView.renderAll = () => {
     $('#meals').empty();
-    app.Meal.all.forEach(meal => $('#meals').append(app.render('meal-template', meal)))
+    app.Meal.all.forEach(meal => {
+      $('#meals').append(app.render('meal-template', meal))
+    });
   }
 
   module.searchView = searchView;
 
-  // animated gif
-  // var image = document.getElementById('likes'),
-  //   button = document.getElementById('pause');
-
-  // if (image.classList && image && button) {
-  //   button.onclick = function () {
-  //     if (this.value === 'pause') {
-  //       image.classList.add('pause');
-  //       this.value = 'play';
-  //     } else {
-  //       image.classList.remove('pause');
-  //       this.value = 'pause';
-  //     }
-  //   };
-  // }
 
 })(app);
