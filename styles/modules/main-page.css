@@ -103,7 +103,7 @@ div.radio-buttons {
 
 .search-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .search-container input[type=text] {
