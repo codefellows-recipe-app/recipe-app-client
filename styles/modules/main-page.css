@@ -61,13 +61,47 @@ html body main {
   background: #ccc;
 }
 
+/* This gives a strike through checked marked box */
 #meal-ingredients input:checked + label {
   text-decoration: line-through;
 }
 
-#meal-instruction input:checked + label {
+#meal-instructions input:checked + label {
   text-decoration: line-through;
 }
+
+/* loading gif css styler */
+/* .like {
+  display: block;
+  width: 300px; 
+  height: 450px;
+  margin:0 auto;
+  background: url(http://gifimage.net/wp-content/uploads/2017/07/cooking-gif-1.gif) 0 0 no-repeat;
+  background-size: 100%;
+  animation: like-gif steps(28) 3s infinite both;
+}
+.pause {
+  animation-play-state: paused;
+}
+div {
+width:100px;
+margin:0 auto;
+text-align:center;
+}
+
+@keyframes like-gif {
+0% {
+  background-position: 0%;
+}
+100% {
+  background-position: 100%;
+}
+} */
+
+
+
+
+
 
 /* ==Style the search field */
 /* form.example input[type=text] {

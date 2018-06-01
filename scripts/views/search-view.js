@@ -23,23 +23,22 @@ var app = app || {};
     app.Meal.all.forEach(meal => $('#meals').append(app.render('meal-template', meal)))
   }
 
-
-  // $(document).ready(() => {
-  //   $('#performMealSearchButton').click(() => {
-  //     const selValue = $('input[name=searchDimension]:checked').val(); // radio button -  i.e. ingredients
-
-  //     const inputValue = $('#searchByMealDimensionQualifier').val(); // text input field - i.e. butter (an ingredient, for example)
-
-  //     if(selValue === 'ingredient') {
-  //       app.Meal.searchByIngredients({ingredients: inputValue}, callback); // todod - figure out what the callback is
-  //     }
-  //     else if(selValue === 'name') {
-  //       app.Meal.searchByName({name: inputValue}, callback); // todod - figure out what the callback is
-  //     } // etc, - maybe use a switch case
-  //   });
-  // })
-
-
   module.searchView = searchView;
+
+  // animated gif
+  // var image = document.getElementById('likes'),
+  //   button = document.getElementById('pause');
+
+  // if (image.classList && image && button) {
+  //   button.onclick = function () {
+  //     if (this.value === 'pause') {
+  //       image.classList.add('pause');
+  //       this.value = 'play';
+  //     } else {
+  //       image.classList.remove('pause');
+  //       this.value = 'pause';
+  //     }
+  //   };
+  // }
 
 })(app);
