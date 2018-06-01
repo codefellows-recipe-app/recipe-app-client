@@ -35,4 +35,4 @@ https://recipe-checklist-app.herokuapp.com/
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-
+Glenn Smith provided an excellent looking hamburger menu from: https://codepen.io/g13nn/pen/eHGEF
