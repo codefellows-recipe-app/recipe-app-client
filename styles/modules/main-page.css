@@ -73,17 +73,15 @@ html body main {
   background: #ccc;
 }
 
+/* This gives a strike through checked marked box */
 #meal-ingredients input:checked + label {
   text-decoration: line-through;
 }
 
-#meal-instruction input:checked + label {
+#meal-instructions input:checked + label {
   text-decoration: line-through;
 }
 
-#copyright {
-  font-size: .5em
-}
 
 /* SEARCH-VIEW SEARCH BOX */
 div.radio-buttons {
@@ -102,10 +100,6 @@ div.radio-buttons {
   text-align: center;
   margin-bottom: 5px;
 }
-
-/* .search-container input[type=radio] {
-  display: none;
-} */
 
 .search-box {
   display: flex;
@@ -131,6 +125,13 @@ div.radio-buttons {
   margin-top: 5px;
   border: 1px solid black;
   border-radius: 3px;
+}
+
+/* SEARCH-VIEW LOADING GIF */
+#searchLoadingSpinner {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 /* SEARCH-VIEW MEAL CARDS */
@@ -165,8 +166,29 @@ div.radio-buttons {
 }
 
 /* MEAL VIEW */
+#meal-view {
+  text-align: center;
+}
+
+#meal-view img {
+  height: 400px;
+  width: 400px;
+}
+
+#meal-view ul,
+#meal-view ol {
+  display: inline-block;
+}
+
 #meal-view li {
   display: block;
+  text-align: left;
+  margin: 5px;
+}
+
+#meal-view input[type=checkbox] {
+  height: 20px;
+  width: 20px;
 }
 
 @media only screen and (min-width: 640px) {

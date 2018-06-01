@@ -138,28 +138,6 @@ img {
   } 
 }
 
-  /* select {
-    width: 12em;
-  } */
-
-/* @media only screen and (min-width: 640px) {
-  background-color: #49a078;
-  /* header section {
-    padding: .1em .1em .1em 2em;
-    float: none; 
-  } */
-/* 
-  select {
-    width: 15em;
-    margin: .2em .2em;
-  }
-
-  #filters li {
-    display: inline;
-    margin: 5px;
-    padding: 5px;
-   } */
-
 img.bio-pic {
   display: block;
   margin-left: auto;
