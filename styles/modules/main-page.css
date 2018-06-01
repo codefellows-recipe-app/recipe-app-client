@@ -127,6 +127,13 @@ div.radio-buttons {
   border-radius: 3px;
 }
 
+/* SEARCH-VIEW LOADING GIF */
+#searchLoadingSpinner {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 /* SEARCH-VIEW MEAL CARDS */
 .meal-card {
   display: flex;
@@ -159,8 +166,23 @@ div.radio-buttons {
 }
 
 /* MEAL VIEW */
+#meal-view {
+  text-align: center;
+}
+
+#meal-view img {
+  height: 400px;
+  width: 400px;
+}
+
+#meal-view ul,
+#meal-view ol {
+  display: inline-block;
+}
+
 #meal-view li {
   display: block;
+  text-align: left;
 }
 
 @media only screen and (min-width: 640px) {
