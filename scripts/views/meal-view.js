@@ -17,13 +17,14 @@ var app = app || {};
         $('#meal-image').attr('src', mealData.thumb);
 
         mealData.ingredients.forEach(ingredient => {
-          $('#meal-ingredients').append(`<li><input type="checkbox">${ingredient.measure} ${ingredient.name}</li>`)
+          $('#meal-ingredients').append(`<li><input type="checkbox" class="ingredient"/><label>${ingredient.measure} ${ingredient.name}</label></li>`)
         })
 
         mealData.instructions.forEach(instruction => {
-          $('#meal-instructions').append(`<li><input type="checkbox">${instruction.body}</li>`);
+          $('#meal-instructions').append(`<li><input type="checkbox" class="ingredient"/><label>${instruction.body}</label></li>`);
         })
       })
   }
+
   module.mealView = mealView;
 })(app)

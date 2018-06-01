@@ -10,6 +10,10 @@ We are building a recipe-app that gives easy to read instructions to help users 
 ## Getting Started
 Download our app through github and enjoy!
 
+https://codefellows-recipe-app.github.io/recipe-app-client/.
+
+https://recipe-checklist-app.herokuapp.com/
+
 ## Architecture
 * HTML5
 * CSS3
@@ -27,6 +31,7 @@ Download our app through github and enjoy!
 05-28-2018 4:00pm - Added icons and continuing with the scaffolding. 
 05-30-2018 10:00am - Images and data are displaying on the page.
 05-30-2018 11:15am - Constructor now lives on the back end.
+05-31-2018 10:15am - All current code is functional and has been pushed to master for deployment.  Working on small bug fixes, some small stretch goals, and prettifying. 
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
