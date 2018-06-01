@@ -183,6 +183,12 @@ div.radio-buttons {
 #meal-view li {
   display: block;
   text-align: left;
+  margin: 5px;
+}
+
+#meal-view input[type=checkbox] {
+  height: 20px;
+  width: 20px;
 }
 
 @media only screen and (min-width: 640px) {
