@@ -131,8 +131,8 @@ img {
 @media only screen and (min-width: 640px) { 
     body main {
     /* background-color: mintcream; */
-    /* background-color: papayawhip; */
-   background-color: turquoise;
+  background-color: papayawhip;
+  
     /* float: none;
     padding: .1em .1em .1em 2em; */ 
   } 
