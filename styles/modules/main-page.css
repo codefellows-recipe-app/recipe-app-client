@@ -73,17 +73,15 @@ html body main {
   background: #ccc;
 }
 
+/* This gives a strike through checked marked box */
 #meal-ingredients input:checked + label {
   text-decoration: line-through;
 }
 
-#meal-instruction input:checked + label {
+#meal-instructions input:checked + label {
   text-decoration: line-through;
 }
 
-#copyright {
-  font-size: .5em
-}
 
 /* SEARCH-VIEW SEARCH BOX */
 div.radio-buttons {
@@ -102,10 +100,6 @@ div.radio-buttons {
   text-align: center;
   margin-bottom: 5px;
 }
-
-/* .search-container input[type=radio] {
-  display: none;
-} */
 
 .search-box {
   display: flex;

@@ -25,5 +25,6 @@ var app = app || {};
         })
       })
   }
+
   module.mealView = mealView;
 })(app)
