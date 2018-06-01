@@ -5,9 +5,21 @@
 
 /* === SPECIFIC STYLING === */
 html body main {
-  background-color: floralwhite;
+  /* background-color: floralwhite; */
   /* background-color: papayawhip;  */
+  background-color: turquoise; 
 }
+
+@media only screen and (min-width: 640px) { 
+  body main {
+  /* background-color: mintcream; */
+  background-color: papayawhip;
+ /* background-color: turquoise; */
+  /* float: none;
+  padding: .1em .1em .1em 2em; */ 
+} 
+}
+
  
 /* == STYLING FOR SEARCH NAV / SEARCH BAR == */
 .topnav {
@@ -60,40 +72,116 @@ html body main {
 .topnav .search-container button:hover {
   background: #ccc;
 }
-/* ==Style the search field */
-/* form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-} */
 
-/* Style the submit button */
-/* form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  /* cursor: pointer;
+#meal-ingredients input:checked + label {
+  text-decoration: line-through;
 }
 
-form.example button:hover {
-  background: #0b7dda;
-} */ */
-
-/* Clear floats */
-/* form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-} */ 
+#meal-instruction input:checked + label {
+  text-decoration: line-through;
+}
 
 #copyright {
   font-size: .5em
+}
+
+/* SEARCH-VIEW SEARCH BOX */
+div.radio-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap; 
+}
+
+.search-container label {
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 40%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* .search-container input[type=radio] {
+  display: none;
+} */
+
+.search-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-container input[type=text] {
+  height: 40px;
+  margin-top: 5px;
+  width: 75%;
+}
+
+.search-container input[type=radio] {
+  display: none;
+}
+
+.search-container input[type=radio]:checked + label {
+  background-color: pink;
+}
+
+.search-container button[type=submit] {
+  height: 40px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+/* SEARCH-VIEW MEAL CARDS */
+.meal-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 1em;
+  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.meal-card > * {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-card img {
+  padding: 1em;
+}
+
+.meal-card a {
+  text-decoration: underline;
+}
+
+.meal-card p {
+  display: none;
+}
+
+/* MEAL VIEW */
+#meal-view li {
+  display: block;
+}
+
+@media only screen and (min-width: 640px) {
+  
+  /* MEAL CARDS */
+  .meal-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .meal-card > * {
+    width: 40%;
+  }
+
+  .meal-card p {
+    display: initial;
+  }
 }

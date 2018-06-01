@@ -48,7 +48,7 @@ var app = app || {};
 
 
   Meal.prototype.create = () => {
-    // BLOCKED: waiting on POST /meals route
+   
     $.post(`${app.ENVIRONMENT.apiUrl}/meals`)
       .then(results => {
         console.log(results);
@@ -62,13 +62,13 @@ var app = app || {};
     console.log(`${app.ENVIRONMENT.apiUrl}${queryString}`);
     $.get(`${app.ENVIRONMENT.apiUrl}${queryString}`)
       .then(results => {
+        console.log('results ===>', results);
+        results === null ? Meal.all = [] : Meal.all = results;
         Meal.all = results;
         app.searchView.renderAll();
       })
       .catch(console.error);
   }
-
-  // 'http://localhost:3000/api/json/recipes/name/chicken'
 
   Meal.fetchOne = (meal_id) => {
     $.get(`${app.ENVIRONMENT.apiUrl}/lookup.php?i=${meal_id}`)
