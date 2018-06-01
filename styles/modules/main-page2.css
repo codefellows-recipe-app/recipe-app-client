@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  color: #780116
+}
+
+/* === SPECIFIC STYLING === */
+html body main {
+  /* background-color: floralwhite; */
+  /* background-color: papayawhip;  */
+  background-color: turquoise; 
+}
+
+/* === MEDIA QUERY === */
+
+@media only screen and (min-width: 640px) { 
+  body main {
+  /* background-color: mintcream; */
+  background-color: papayawhip;
+ /* background-color: turquoise; */
+  /* float: none;
+  padding: .1em .1em .1em 2em; */ 
+  } 
+}
+
+ 
+/* == STYLING FOR SEARCH NAV / SEARCH BAR == */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/* == STYLING FOR HAMBURGER MENU == */
+.hamburger {
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
+.cross {
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
+.menu { z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+
+.menu ul { margin: 0; padding: 0; list-style-type: none; list-style-image: none;
+}
+
+.menu li { display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;
+}
+
+.menu li:hover { display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;
+}
+
+.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a:hover {  color: #666; text-decoration:none;}
+.menu a { text-decoration:none; color:#666;}
+.menu a:hover { text-decoration:none; color:#666;}
+
+#meal-ingredients input:checked + label {
+  text-decoration: line-through;
+}
+
+#meal-instruction input:checked + label {
+  text-decoration: line-through;
+}
+
+/* ==Style the search field */
+/* form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+} */
+
+
+/* Style the submit button */
+/* form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  /* cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+} */ */
+
+/* Clear floats */
+/* form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+} */ 
+
+#copyright {
+  font-size: .5em
+}
+
+/* SEARCH-VIEW MEAL CARDS */
+.meal-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 1em;
+  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.meal-card > * {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-card img {
+  padding: 1em;
+}
+
+.meal-card a {
+  text-decoration: underline;
+}
+
+.meal-card p {
+  display: none;
+}
+
+/* MEAL VIEW */
+
+#meal-view li {
+  display: block;
+}
+
+@media only screen and (min-width: 640px) {
+  
+  /* MEAL CARDS */
+  .meal-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .meal-card > * {
+    width: 40%;
+  }
+
+  .meal-card p {
+    display: initial;
+  }
+}
